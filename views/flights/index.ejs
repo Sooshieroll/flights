@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights that you are following</title>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+<div class="navbar">
+    <%- include('../features/navbar.ejs') %>
+</div>
+
+<h1 class="following">Here is a list of flights that you are following:</h1>
+
+<% flights.forEach(f=> { %>
+    <p class="following">Origin: <%= f.origin %>
+    </p>
+    <p class="following">Destination: <%= f.destination%>
+    </p>
+    <p class="following">Departure At: <%= f.departureAt %>
+    </p>
+    <p class="following">Return At: <%= f.returnAt %>
+    </p>
+    <p class="following">Flight ID: <%= f.id %>
+    </p>
+
+    <% let flightInfo=`/flights/show/${f.id}` %>
+        <div class="following"><a href="<%=flightInfo%>">Flight Info</a></div>
+
+        <br>
+
+        <% let deleteFlight=`/flights/deleteFlight/${f.id}?_method=DELETE`; %>
+            <form class="following" method="POST" action="<%= deleteFlight %>">
+                <input type="submit" value="Delete">
+            </form>
+            <div class="line-1"></div>
+
+            <% }) %>

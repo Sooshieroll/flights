@@ -1,0 +1,58 @@
+.headline {
+    font-size: 30px;
+    color: blue;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: grey;
+}
+
+.bold {
+    font-weight: bold;
+
+}
+
+.cost {
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    color: black;
+    position: relative;
+
+
+}
+
+.container {
+    font-size: 20px;
+    font-family: cursive;
+}
+
+body {
+    background-image: url('/images/background-main.jpg');
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.container-new {
+    background-color: white;
+    width: 1500px;
+    margin-left: 9.7%;
+    border-radius: 1%;
+    position: absolute;
+
+
+}
+
+.no-results {
+    color: red;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    text-align: center;
+}

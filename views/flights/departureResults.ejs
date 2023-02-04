@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Flight Results</title>
+
+
+    <link href="/css/flights.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../features/navbar.ejs') %>
+        <br>
+        <form method="GET" action="/flights/new" />
+        <button type="submit">BACK TO SEARCH</button>
+        </form>
+
+</body>
+<div class="container-new">
+    <br>
+    <br>
+    <span class="headline">DEPARTURING FLIGHTS</span>
+
+
+    <p class="bold">Origin: <%= departureFlight.origin %>
+    </p>
+    <p class="bold">Destination: <%= departureFlight.destination %>
+    </p>
+    <p>Departure At: <%= departureFlight.departure_at %>
+    </p>
+    <p>Duration: <%= departureFlight.duration %> minutes
+    </p>
+    <p class="cost">Cost: $<%= departureFlight.price %>
+    </p>
+
+    <span class="headline"> RETURN FLIGHTS</span>
+
+
+    <p class="bold">Origin: <%= returnFlight.origin %>
+    </p>
+    <p class="bold">Destination: <%= returnFlight.destination %>
+    </p>
+    <p>Return At: <%= returnFlight.departure_at %>
+    </p>
+    <p>Duration: <%= returnFlight.duration %> minutes
+    </p>
+    <p class="cost">Cost: $<%= returnFlight.price %>
+    </p>
+
+
+    <form method="POST" action="/flights/addFlight">
+        <input type="text" value="<%= departureFlight.origin %>" name="origin" hidden>
+        <input type="text" value="<%= departureFlight.destination %>" name="destination" hidden>
+        <input type="text" value="<%= departureFlight.departure_at %>" name="departureAt" hidden>
+        <input type="text" value="<%= returnFlight.departure_at %>" name="returnAt" hidden>
+
+        <button type="submit">FOLLOW FLIGHTS</button>
+    </form>
+    <br>
+    <div class="container-new">

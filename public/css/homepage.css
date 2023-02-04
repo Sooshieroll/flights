@@ -1,0 +1,52 @@
+body {
+    /* background-image: url('/images/background-main.jpg'); */
+    background-color: lightblue;
+}
+
+.p-2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h2,
+h3 {
+    color: grey;
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive;
+}
+
+h4 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.search {
+    text-align: center;
+    font-size: 30px;
+}
+
+.container {
+    font-size: 30px;
+    font-family: serif;
+    color: blue;
+}
+
+a {
+    color: blue;
+    border: 1px;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.following {
+    text-align: center;
+    font-size: 20px;
+}
+
+.line-1 {
+    border-top: 1px solid black;
+}

@@ -1,0 +1,9 @@
+<form method="POST" action="/flights/<%=flightId%>/?_method=PUT">
+    <label>Origin:</label>
+    <input type="text" name="origin" value="<%= flightId.origin %>">
+    <label>Destination:</label>
+    <input type="text" name="destination" value="<%= flightId.destination %>">
+    <label>Departure At:</label>
+    <input type="date" name="departureAt" value="<%= flightId.departureAt %>">
+    <input type="submit">
+</form>
